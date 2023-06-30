@@ -31,7 +31,7 @@ function generatePassword() {
   }
 
   //exits if no valid input is recieved
-  var confirmLower = confirm("Do you want your password to contain lowercase letters?"); 
+  var confirmLower = confirm("Do you want your password to contain lowercase letters?");
   var confirmUpper = confirm("Do you want your password to contain upperrcase letters?");
   var confirmNum = confirm("Do you want your password to contain numbers?");
   var confirmSpec = confirm("Do you want your password to contain special characters?");
@@ -42,7 +42,7 @@ function generatePassword() {
   //exits if all character prompts are declined
 
   var userChara = [];
-  
+
   if (confirmLower) {
     userChara = userChara.concat(lowerCase);
   }
@@ -55,8 +55,20 @@ function generatePassword() {
   if (confirmSpec) {
     userChara = userChara.concat(special);
   }
+  //Combines all of the character types that the user wants
 
-  console.log(userChara);
+
+
+  /* var index = Math.floor(Math.random() * userChara.length); */
+  //Generates random values that correspond to index of possible characters for password
+
+    var pass = "";
+  for (var i = 0; i < charaLen; i++) {
+    var index = Math.floor(Math.random() * userChara.length);
+    pass += userChara[index];
+    
+  }
+  return pass;
 
 }
 //Pseudocode
