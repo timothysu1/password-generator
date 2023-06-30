@@ -29,12 +29,14 @@ function generatePassword() {
   if (!charaLen || charaLen < 8 || charaLen > 128) {
     return;
   }
-
   //exits if no valid input is recieved
+
   var confirmLower = confirm("Do you want your password to contain lowercase letters?");
   var confirmUpper = confirm("Do you want your password to contain upperrcase letters?");
   var confirmNum = confirm("Do you want your password to contain numbers?");
   var confirmSpec = confirm("Do you want your password to contain special characters?");
+  //determines what kind of characters the user wants
+
 
   if (!confirmLower && !confirmUpper && !confirmNum && !confirmSpec) {
     return;
@@ -55,9 +57,7 @@ function generatePassword() {
   if (confirmSpec) {
     userChara = userChara.concat(special);
   }
-  //Combines all of the character types that the user wants
-
-
+  //Combines all of the character types that the user wants based on confirms
 
   /* var index = Math.floor(Math.random() * userChara.length); */
   //Generates random values that correspond to index of possible characters for password
@@ -66,11 +66,12 @@ function generatePassword() {
   for (var i = 0; i < charaLen; i++) {
     var index = Math.floor(Math.random() * userChara.length);
     pass += userChara[index];
-    
   }
+  //loop adds random charcters together according to user input to create password
   return pass;
-
+  //returns generated password once loop is finished
 }
+
 //Pseudocode
 //When the button is pressed 
 //Prompt asking how long the password needs to be
@@ -78,7 +79,3 @@ function generatePassword() {
 //Prompt asking if the password should include lowercase, uppercase, numeric, and/or special characters
   //User must choose at least one
 //All of the charcter types will be accounted for and a random password will be created
-
-
-
-//Testing
