@@ -24,9 +24,14 @@ var special = [" ", "!", '"', "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", 
 // All of the posibble characters that can be used to make a password
 
 function generatePassword() {
+  var charaLen = prompt("How long should your password be? (8-128 characters long)");
 
+  if (!charaLen || charaLen < 8 || charaLen > 128) {
+    return;
+  }
+
+  var confirmLower = confirm("Do you want your password to contain lowercase letter?") 
 }
-
 //Pseudocode
 //When the button is pressed 
 //Prompt asking how long the password needs to be
@@ -38,4 +43,3 @@ function generatePassword() {
 
 
 //Testing
-
