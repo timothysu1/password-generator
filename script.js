@@ -30,7 +30,34 @@ function generatePassword() {
     return;
   }
 
-  var confirmLower = confirm("Do you want your password to contain lowercase letter?") 
+  //exits if no valid input is recieved
+  var confirmLower = confirm("Do you want your password to contain lowercase letters?"); 
+  var confirmUpper = confirm("Do you want your password to contain upperrcase letters?");
+  var confirmNum = confirm("Do you want your password to contain numbers?");
+  var confirmSpec = confirm("Do you want your password to contain special characters?");
+
+  if (!confirmLower && !confirmUpper && !confirmNum && !confirmSpec) {
+    return;
+  }
+  //exits if all character prompts are declined
+
+  var userChara = [];
+  
+  if (confirmLower) {
+    userChara = userChara.concat(lowerCase);
+  }
+  if (confirmUpper) {
+    userChara = userChara.concat(upperCase);
+  }
+  if (confirmNum) {
+    userChara = userChara.concat(numeric);
+  }
+  if (confirmSpec) {
+    userChara = userChara.concat(special);
+  }
+
+  console.log(userChara);
+
 }
 //Pseudocode
 //When the button is pressed 
