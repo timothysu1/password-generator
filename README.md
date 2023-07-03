@@ -1,5 +1,5 @@
-# Portfolio - Timothy Su
-This webpage allows for the user to create a randomly generated password they can use. The user is allowed to choose the desired length of the password and what type of characters that will compose the password.
+# Password Generator
+This webpage allows the user to create a randomly generated password they can use. The user is allowed to choose the desired length of the password and what type of characters will compose the password.
 
 ## Built With
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -11,7 +11,7 @@ This webpage allows for the user to create a randomly generated password they ca
 * [See Live Site](https://timothysu1.github.io/password-generator/)
 
 ## Usage
-The user is brought to a page where they are prompted to click a button to initiate the password making process. The user will then enter the desired character length of the password. The user will then be prompted to choose what type of characters they want in their password. Once all of the prompts are answered, then the password will be created for the user to copy. If the user wishes to make another password, then they can press the button again to repeat the process.
+The user is brought to a page where they are prompted to click a button to initiate the password-making process. The user will then enter the desired character length of the password. The user will then be prompted to choose what type of characters they want in their password. Once all of the prompts are answered, then the password will be created for the user to copy. If the user wishes to make another password, then they can press the button again to repeat the process.
 
 ## Learning Points 
 * Using JavaScript to give functionality to a webpage
@@ -46,4 +46,4 @@ Converting all letters in an array to upper case: https://askjavascript.com/how-
 
 ## License
 
-Please refer to license in the repo. 
+Please refer to the license in the repo. 
